@@ -1,7 +1,127 @@
 \begin{exercise}
-if $(x_\alpha)_{\alpha}$
+If \((x_\alpha)_{\alpha \in A}\) is a collection of numbers \(x_\alpha \in [0, +\infty]\)
+ such that \(\sum_{\alpha \in A}x_\alpha < \infty\),
+  show that \(x_\alpha=0\) for all but at most countably many
+   \(\alpha \in A\), even if \(A\) itself is uncountable.
 \end{exercise}
+
+\textbf{Countability: a short review}
+
+\[
+\mathbb{N}:=\{1,2,3,\ldots\}.
+\]
+
+We call a set \(A\) \emph{countably infinite} if there exists a bijection
+\[
+f:\mathbb{N}\to A.
+\]
+
+Equivalently, the elements of \(A\) can be listed as
+\[
+A=\{a_1,a_2,a_3,\ldots\}.
+\]
+
+A set is called \emph{countable} if it is finite or countably infinite.
+
+Thus, if \(A\) is bijective with \(\mathbb{N}\), then \(A\) is countable
+(more precisely, countably infinite).
+
+\medskip
+
+\textbf{Common examples}
+
+\[
+\mathbb{N},\ \mathbb{Z},\ \mathbb{Q}
+\quad\text{are countable.}
+\]
+
+\[
+\mathbb{R}
+\quad\text{is uncountable.}
+\]
+
+If \(A\) and \(B\) are countable, then their Cartesian product
+\[
+A\times B:=\{(a,b):a\in A,\ b\in B\}
+\]
+is countable.
+
+For example,
+\[
+\mathbb{N}\times\mathbb{N}
+\quad\text{and}\quad
+\mathbb{Q}\times\mathbb{Q}
+\]
+are countable.
+
+The power set of \(\mathbb{N}\),
+\[
+\mathcal{P}(\mathbb{N})
+:=\{E:E\subseteq\mathbb{N}\},
+\]
+is uncountable.
+
+In fact, Cantor's theorem says that for every set \(A\),
+\[
+\mathcal{P}(A)
+\quad\text{has strictly larger cardinality than }A.
+\]
+
+A Vitali set \(V\subseteq[0,1]\) is uncountable
+(in fact, it has the same cardinality as \(\mathbb{R}\));
+it is also non-measurable.
+
+\medskip
+
+\textbf{Useful consequences}
+
+A subset of a countable set is countable:
+\[
+B\subseteq A,\quad A\text{ countable}
+\quad\Longrightarrow\quad
+B\text{ countable}.
+\]
+
+A countable union of countable sets is countable:
+\[
+A_1,A_2,A_3,\ldots\text{ countable}
+\quad\Longrightarrow\quad
+\bigcup_{n=1}^{\infty} A_n
+\text{ is countable}.
+\]
+
+In particular, a countable union of finite sets is countable.
+
+Contrapositive form:
+\[
+\bigcup_{n=1}^{\infty} A_n\text{ is uncountable}
+\quad\Longrightarrow\quad
+\text{at least one }A_n\text{ is uncountable}.
+\]
+
+A finite union of countable sets is countable:
+\[
+A_1,\ldots,A_k\text{ countable}
+\quad\Longrightarrow\quad
+A_1\cup\cdots\cup A_k
+\text{ is countable}.
+\]
+
+If \(A\) is uncountable and \(B\subseteq A\) is countable, then
+\[
+A\setminus B
+\]
+is uncountable.
 
 \begin{proof}
 It is an easy proof.
+Define \[A_k = \{\alpha: x_\alpha \geq \frac{1}{n}\}\]
+and \(A = \cup_{k=1}^{\infty}A_k \cup \{\alpha: x_\alpha = 0\}\).
+
+\(\cup_{k=1}^{\infty}A_k\) uncountable => exist a least 1 \(A_k\) uncountable (if not, uniun of countable set is countable). So 
+\[
+   \sum_{\alpha \in A}x_\alpha \geq \sum_{\alpha \in A_k}x_\alpha \geq \frac{1}{k} \times N = \infty
+\]
+\(=>\) contradict \(=> \cup_{k=1}^{\infty}A_k\) countable \(=> A_k\) countable for all, or \(x_\alpha > 0\) at most countable many \(\alpha \in A\)
+
 \end{proof}
